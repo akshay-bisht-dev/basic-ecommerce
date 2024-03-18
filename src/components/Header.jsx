@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { Cart } from '../context/Context'
 
 const Header = () => {
-    const { product } = useContext(Cart);
+    const { cart } = useContext(Cart);
     return (
         <div>
             <nav>
@@ -13,7 +13,7 @@ const Header = () => {
 
                 <div className="menu">
                     <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/cart'>Cart({product.length})</NavLink>
+                    <NavLink to='/cart'>Cart({cart.length})</NavLink>
                 </div>
             </nav>
         </div>

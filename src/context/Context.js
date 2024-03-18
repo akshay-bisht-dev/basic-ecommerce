@@ -6,6 +6,7 @@ export const Cart = createContext();
 
 const Context = ({ children }) => {
   const [product, setProduct] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const fetchData = () => {
     axios
@@ -22,7 +23,7 @@ const Context = ({ children }) => {
     fetchData();
   }, []);
   return (
-    <Cart.Provider value={{ product, setProduct }}>{children}</Cart.Provider>
+    <Cart.Provider value={{ product, cart, setCart }}>{children}</Cart.Provider>
   );
 };
 

@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Cart } from '../context/Context'
 
 const SingleProduct = ({ prod }) => {
-    const { product, setProduct } = useContext(Cart);
+    const { cart, setCart } = useContext(Cart);
     return (
         <>
             <div className='product' key={prod.id}>
@@ -13,15 +13,14 @@ const SingleProduct = ({ prod }) => {
                     <h5>${prod.price}</h5>
 
                     <div className="btns">
-                        {product.includes(prod) ? (
+                        {cart.includes(prod) ? (
                             <button
-                                className="add remove"
-                                onClick={() => setProduct(product.filter((c) => c.id !== prod.id))}
+                                onClick={() => setCart(cart.filter((c) => c.id !== prod.id))}
                             >
                                 Remove from Cart
                             </button>
                         ) : (
-                            <button className="add" onClick={() => setProduct([...product, prod])}>
+                            <button onClick={() => setCart([...cart, prod])}>
                                 Add to Cart
                             </button>
                         )}

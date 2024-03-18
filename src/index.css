@@ -17,10 +17,12 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   font-weight: bold;
   color: red;
 }
+
 .menu {
   display: flex;
   gap: 10px;
@@ -33,24 +35,35 @@ nav {
   place-items: center;
   place-content: center;
 }
+
 .product {
   border: 1px solid black;
 }
+
 .product img {
   height: 18rem;
   width: 18rem;
   margin: 0 auto;
   display: block;
 }
+
 .product_details h5 {
   color: black;
 }
+
 .btns {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
+
 .btns button {
   padding: 8px 15px;
+}
+
+.cart_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
