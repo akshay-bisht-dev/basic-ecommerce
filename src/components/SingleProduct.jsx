@@ -8,7 +8,7 @@ const SingleProduct = ({ prod }) => {
             <div className='product' key={prod.id}>
                 <img src={prod.image} alt={prod.title} />
                 <div className='product_details'>
-                    <h5>{prod.title}</h5>
+                    <h5>{prod.title.substr(0, 40)}...</h5>
                     <p>{prod.description.substr(0, 100)}...</p>
                     <h5>${prod.price}</h5>
 

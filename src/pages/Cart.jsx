@@ -16,7 +16,7 @@ const CartPage = () => {
         <div>
             <div className="cart_details">
                 <h1>Cart Products</h1>
-                <span>Total: {total}</span>
+                <span>Total: ${total}</span>
             </div>
             <div className='products_div'>
                 {cart.map((prod) => (

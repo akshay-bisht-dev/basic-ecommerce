@@ -5,7 +5,7 @@ import { Cart } from '../context/Context'
 const Header = () => {
     const { cart } = useContext(Cart);
     return (
-        <div>
+        <div className='navbar_div'>
             <nav>
                 <div className="logo">
                     <Link to='/'>E-comm</Link>

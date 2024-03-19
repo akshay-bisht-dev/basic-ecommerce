@@ -11,21 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.container {
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+}
 
+.navbar_div {
+  width: 100%;
+}
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
+  color: white;
 }
 
 .logo {
+  border-bottom: 1px solid black;
+  padding-bottom: 1px;
+}
+.logo a {
   font-weight: bold;
   color: red;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .menu {
   display: flex;
   gap: 10px;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.menu a.active {
+  color: red;
 }
 
 .products_div {
@@ -38,11 +62,14 @@ nav {
 
 .product {
   border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product img {
   height: 18rem;
-  width: 18rem;
+  width: 100%;
   margin: 0 auto;
   display: block;
 }
@@ -50,20 +77,52 @@ nav {
 .product_details h5 {
   color: black;
 }
-
-.btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 .btns button {
   padding: 8px 15px;
+  display: block;
+  width: 100%;
 }
 
 .cart_details {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer_div {
+  padding: 20px 0;
+  text-align: center;
+}
+.footer_div p {
+  color: black;
+}
+.footer_div p span {
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+  .products_div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products_div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .products_div {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
